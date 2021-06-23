@@ -1,0 +1,21 @@
+@model MetadataComponentViewModel
+
+@if( !string.IsNullOrWhiteSpace( Model?.Author ) )
+{
+    <meta name="author" content="@Model.Author" />
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Title ) )
+{
+    <meta name="title" content="@Model.Title" />
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Description ) )
+{
+    <meta name="description" content="@Model.Description" />
+}
+
+@if( Model?.Keywords?.Any() == true )
+{
+    <meta name="keywords" content="@string.Join( ',', Model.Keywords )" />
+}

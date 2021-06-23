@@ -1,0 +1,12 @@
+<!-- <Project Sdk="Microsoft.Build.NoTargets/3.0.4"> -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <VersionPrefix>1.0.0</VersionPrefix>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceDirectory)\AspNetCore\Metadata\src\BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.csproj" />
+    </ItemGroup>
+
+</Project>

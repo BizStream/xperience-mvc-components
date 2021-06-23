@@ -1,0 +1,21 @@
+<Project>
+
+    <PropertyGroup>
+        <!-- Create a property to easily reference the root of the `src` folder -->
+        <SourceDirectory>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</SourceDirectory>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+        <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+        <TargetXperienceVersion>[13.0.5,14.0.0)</TargetXperienceVersion>
+        <IncludeXperienceWebReferences>true</IncludeXperienceWebReferences>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryUrl>https://github.com/BizStream/xperience-components.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+</Project>
