@@ -1,7 +1,9 @@
 <Project>
 
     <PropertyGroup>
+        <AutoIncludeReadMe Condition=" '$(IsTestProject)' == 'true' ">false</AutoIncludeReadMe>
         <TargetXperienceVersion Condition=" '$(IsTestProject)' == 'true' AND '$(TargetFramework)' == 'net5.0' ">[13.0.19,14.0.0)</TargetXperienceVersion>
+        <PackageReadmeFile Condition=" '$(AutoIncludeReadMe)' == 'true' ">README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -16,7 +18,7 @@
         <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetXperienceVersion)" />
     </ItemGroup>
 
-    <ItemGroup Condition=" '$(IsTestProject)' != 'true' ">
+    <ItemGroup Condition=" '$(AutoIncludeReadMe)' == 'true' ">
         <None Include="..\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 

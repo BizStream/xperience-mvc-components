@@ -1,19 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
     <PropertyGroup>
+        <AutoIncludeReadMe>false</AutoIncludeReadMe>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <VersionPrefix>1.0.0</VersionPrefix>
     </PropertyGroup>
-
-    <ItemGroup>
-        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
-    </ItemGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
 
     <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
         <ProjectReference Include="..\..\Breadcrumbs\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(SourceDirectory)\..\README.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
 </Project>

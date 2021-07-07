@@ -52,15 +52,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Ab
         {
             ImportObjectsData();
 
-            var site = SiteInfo.Provider.Get( "NewSite" );
-            SiteContext.CurrentSite = site;
-
-            // create default culture
-            CultureSiteInfo.Provider.Add(
-                CultureInfo.Provider.Get( "en-US" ).CultureID,
-                site.SiteID
-            );
-
+            var site = SeedSite();
             var root = SeedRootNode( site );
 
             SeedHomeNode( root );
@@ -90,6 +82,18 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Ab
             root.Insert( null, false );
 
             return root;
+        }
+
+        private SiteInfo SeedSite( )
+        {
+            var site = SiteInfo.Provider.Get( "NewSite" );
+            CultureSiteInfo.Provider.Add(
+                CultureInfo.Provider.Get( "en-US" ).CultureID,
+                site.SiteID
+            );
+
+            SiteContext.CurrentSite = site;
+            return site;
         }
 
         private TreeNode SeedTestFolder( TreeNode parent )
