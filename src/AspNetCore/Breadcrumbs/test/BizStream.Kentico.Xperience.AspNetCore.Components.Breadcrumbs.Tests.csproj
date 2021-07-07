@@ -11,6 +11,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="AngleSharp" Version="0.16.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
         <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
     </ItemGroup>
 

@@ -6,9 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
 {
 
+    /// <summary> Extensions to <see cref="IServiceCollection"/>. </summary>
     public static class IServiceCollectionExtensions
     {
 
+        /// <summary> Registers services required for Xperience Breadcrumbs Component functionality. </summary>
         public static IServiceCollection AddXperienceBreadcrumbsComponent( this IServiceCollection services )
         {
             if( services == null )

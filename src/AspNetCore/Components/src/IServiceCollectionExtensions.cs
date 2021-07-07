@@ -2,7 +2,7 @@
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components
+namespace BizStream.Kentico.Xperience.AspNetCore.Components
 {
 
     /// <summary> Extensions to <see cref="IServiceCollection"/> for registering services required by Xperience Mvc Components. </summary>

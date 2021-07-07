@@ -1,8 +1,12 @@
 @model IEnumerable<BreadcrumbItem>
 
-<ul class="breadcrumbs">
-	@foreach( var breadcrumb in Model )
-	{
-		@await Html.PartialAsync( "_BreadcrumbItem", breadcrumb )
-	}
-</ul>
+<div class="breadcrumbs-container">
+    <nav class="breadcrumbs">
+        <ol>
+            @foreach( var breadcrumb in Model )
+            {
+                @await Html.PartialAsync( "Components/Breadcrumbs/_BreadcrumbItem", breadcrumb )
+            }
+        </ol>
+    </nav>
+</div>

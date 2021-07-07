@@ -13,6 +13,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryUrl>https://github.com/BizStream/xperience-components.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>

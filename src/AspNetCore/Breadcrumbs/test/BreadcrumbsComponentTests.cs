@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using AngleSharp.Html.Dom;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Abstractions;
 using BizStream.Kentico.Xperience.AspNetCore.Mvc.Testing;
 using Kentico.Content.Web.Mvc.Routing;
@@ -11,7 +13,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
 {
 
     [TestFixture( Category = "IsolatedMvc" )]
-    [TestOf( typeof( BreadcrumbsComponent ) )]
+    [TestOf( typeof( Breadcrumbs ) )]
     public class BreadcrumbsComponentTests : BreadcrumbsTests<BreadcrumbsComponentTests.Startup>
     {
         public class Startup : XperienceTestStartup
@@ -31,13 +33,28 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
         [TestCase( "/testnode-0" )]
         [TestCase( "/testnode-0/testnode-1" )]
         [TestCase( "/testnode-0/testnode-1/testnode-2" )]
-        public async Task BreadcrumbsComponent_ShouldReturnContent( string url )
+        public async Task BreadcrumbsComponent_RenderedContent_ShouldNotBeEmpty( string url )
         {
             var response = await Client.GetAsync( url );
             response.EnsureSuccessStatusCode();
 
             var content = await response.Content.ReadAsStringAsync();
             Assert.IsFalse( string.IsNullOrEmpty( content ) );
+        }
+
+        [Test]
+        [TestCase( "/testnode-0" )]
+        [TestCase( "/testnode-0/testnode-1" )]
+        [TestCase( "/testnode-0/testnode-1/testnode-2" )]
+        public async Task BreadcrumbsComponent_RenderedContent_ShouldHaveContainerDiv( string url )
+        {
+            var response = await Client.GetAsync( url );
+            response.EnsureSuccessStatusCode();
+
+            var element = await HtmlHelpers.GetElementAsync( response );
+
+            Assert.IsInstanceOf<IHtmlDivElement>( element );
+            Assert.Contains( "breadcrumbs-container", element.ClassList.ToArray() );
         }
 
     }

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Models
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions
 {
 
     /// <summary> Represents a single item of a hierarchy of pages. </summary>

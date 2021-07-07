@@ -12,6 +12,10 @@
         <PackageReference Include="Kentico.Xperience.Libraries.Tests" Version="$(TargetXperienceVersion)" />
     </ItemGroup>
 
+    <ItemGroup Condition=" '$(IsTestProject)' != 'true' ">
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
     <Target Name="SetRepositoryGitMetadata" BeforeTargets="GenerateNuspec;Pack" DependsOnTargets="GitInfo">
         <PropertyGroup>
             <RepositoryBranch>$(GitBranch)</RepositoryBranch>

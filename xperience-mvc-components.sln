@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0390BA2F-F98B-47C8-9097-BF2BFC7D51E2}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bizstream.Kentico.Xperience
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Breadcrumbs", "Breadcrumbs", "{F174EB98-310F-4A98-A40F-B9B8160D2E0F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bizstream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs", "src\AspNetCore\Breadcrumbs\src\Bizstream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj", "{E55EE5D8-2B8D-48E3-A2E4-6015038C3154}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs", "src\AspNetCore\Breadcrumbs\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj", "{E55EE5D8-2B8D-48E3-A2E4-6015038C3154}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests", "src\AspNetCore\Breadcrumbs\test\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.csproj", "{F9099859-C4CC-4132-9D75-8CA5EF90A946}"
 EndProject
