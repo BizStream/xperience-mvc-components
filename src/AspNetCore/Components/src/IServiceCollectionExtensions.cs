@@ -9,6 +9,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components
     public static class IServiceCollectionExtensions
     {
 
+        /// <summary> Registers services required by Xperience Components. </summary>
         public static IServiceCollection AddXperienceComponents( this IServiceCollection services )
         {
             if( services == null )

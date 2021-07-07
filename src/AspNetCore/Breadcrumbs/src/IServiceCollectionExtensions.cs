@@ -10,7 +10,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
     public static class IServiceCollectionExtensions
     {
 
-        /// <summary> Registers services required for Xperience Breadcrumbs Component functionality. </summary>
+        /// <summary> Registers services required by Xperience Breadcrumbs Component. </summary>
         public static IServiceCollection AddXperienceBreadcrumbsComponent( this IServiceCollection services )
         {
             if( services == null )
