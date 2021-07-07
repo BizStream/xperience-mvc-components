@@ -1,5 +1,10 @@
 @model IEnumerable<BreadcrumbItem>
 
+@if( !Model.Any() )
+{
+	return;
+}
+
 <div class="breadcrumbs-container">
     <nav class="breadcrumbs">
         <ol>

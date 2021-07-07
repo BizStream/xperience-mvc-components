@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
 {
 
-    /// <summary> A <see cref="ViewComponent"/> that can be used to render breadcrumbs from the Xperience Content Tree. </summary>
+    /// <summary> A <see cref="ViewComponent"/> that renders breadcrumbs based on Xperience Content Tree Routing.  </summary>
     public class Breadcrumbs : ViewComponent
     {
         #region Fields
@@ -27,18 +27,11 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
 
         public async Task<IViewComponentResult> InvokeAsync( )
         {
-            if( !pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context ) )
-            {
-                return Content( string.Empty );
-            }
+            var breadcrumbs = pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context )
+                ? await breadcrumbsRetriever.RetrieveAsync( context.Page )
+                : null;
 
-            var breadcrumbs = await breadcrumbsRetriever.RetrieveAsync( context.Page );
-            if( breadcrumbs?.Any() != true )
-            {
-                return Content( string.Empty );
-            }
-
-            return View( breadcrumbs );
+            return View( breadcrumbs ?? Enumerable.Empty<BreadcrumbItem>() );
         }
 
     }
