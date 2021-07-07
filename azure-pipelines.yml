@@ -15,6 +15,9 @@ trigger:
       - main
       - develop
 
+variables:
+  - group: Shared Secrets
+
 steps:
   - task: DotNetCoreCLI@2
     displayName: restore dependencies
