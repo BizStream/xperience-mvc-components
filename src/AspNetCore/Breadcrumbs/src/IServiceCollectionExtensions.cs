@@ -18,6 +18,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
                 throw new ArgumentNullException( nameof( services ) );
             }
 
+            services.AddOptions<BreadcrumbRetrievalOptions>();
             services.AddTransient<IBreadcrumbsRetriever, BreadcrumbsRetriever>();
             return services;
         }
