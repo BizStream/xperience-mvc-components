@@ -2,6 +2,7 @@
 
     <PropertyGroup>
         <AutoIncludeReadMe>false</AutoIncludeReadMe>
+        <Description>Meta package of all BizStream Xperience Components.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <VersionPrefix>1.0.0</VersionPrefix>
     </PropertyGroup>
