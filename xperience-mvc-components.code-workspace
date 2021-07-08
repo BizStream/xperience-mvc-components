@@ -24,7 +24,7 @@
     "editor.tabSize": 4,
     "javascript.validate.enable": false,
     "omnisharp.autoStart": true,
-    "omnisharp.defaultLaunchSolution": "xperience-status-code-pages.sln",
+    "omnisharp.defaultLaunchSolution": "xperience-mvc-components.sln",
     "omnisharp.enableEditorConfigSupport": true,
     "omnisharp.enableRoslynAnalyzers": true,
     "files.exclude": {
