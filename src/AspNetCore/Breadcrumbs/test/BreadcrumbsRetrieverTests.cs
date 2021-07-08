@@ -60,7 +60,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
             var breadcrumbRetriever = Factory.Services.GetRequiredService<BreadcrumbsRetriever>();
             var breadcrumbs = await breadcrumbRetriever.RetrieveAsync(
                 GetTestNodeByAlias( alias ),
-                options => options.IncludeHomePage()
+                options => options.IncludeCurrentPage()
             );
 
             var crumb = breadcrumbs.Last();

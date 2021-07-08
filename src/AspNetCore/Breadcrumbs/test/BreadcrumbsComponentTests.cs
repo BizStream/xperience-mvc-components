@@ -46,7 +46,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
         [TestCase( "/testnode-0" )]
         [TestCase( "/testnode-0/testnode-1" )]
         [TestCase( "/testnode-0/testnode-1/testnode-2" )]
-        public async Task BreadcrumbsComponent_RenderedContent_ShouldHaveContainerDiv( string url )
+        public async Task BreadcrumbsComponent_RenderedContent_ShouldHaveContainerDivWithCssClass( string url )
         {
             var response = await Client.GetAsync( url );
             response.EnsureSuccessStatusCode();
@@ -54,7 +54,25 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
             var element = await HtmlHelpers.GetElementAsync( response );
 
             Assert.IsInstanceOf<IHtmlDivElement>( element );
+
+            Assert.AreEqual( "DIV", element.TagName );
             Assert.Contains( "breadcrumbs-container", element.ClassList.ToArray() );
+        }
+
+        [Test]
+        [TestCase( "/testnode-0" )]
+        [TestCase( "/testnode-0/testnode-1" )]
+        [TestCase( "/testnode-0/testnode-1/testnode-2" )]
+        public async Task BreadcrumbsComponent_RenderedContent_ShouldHaveNavWithCssClass( string url )
+        {
+            var response = await Client.GetAsync( url );
+            response.EnsureSuccessStatusCode();
+
+            var element = ( await HtmlHelpers.GetElementAsync( response ) )
+                ?.FirstElementChild;
+
+            Assert.AreEqual( "NAV", element.TagName );
+            Assert.Contains( "breadcrumbs", element.ClassList.ToArray() );
         }
 
     }
