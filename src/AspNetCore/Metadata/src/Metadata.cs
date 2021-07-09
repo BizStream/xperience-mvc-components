@@ -1,4 +1,4 @@
-using AutoMapper;
+using System.Threading.Tasks;
 using CMS.DocumentEngine;
 using Kentico.Content.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
@@ -6,31 +6,23 @@ using Microsoft.AspNetCore.Mvc;
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.Metadata
 {
 
+    /// <summary> A <see cref="ViewComponent"/> that renders meta-tags based on the current Xperience Page.  </summary>
     public class Metadata : ViewComponent
     {
         #region Fields
-        private readonly IMapper mapper;
-        private readonly IPageDataContextRetriever retriever;
+        private readonly IPageDataContextRetriever pageContextRetriever;
         #endregion
 
-        public Metadata(
-            IMapper mapper,
-            IPageDataContextRetriever retriever
-        )
-        {
-            this.mapper = mapper;
-            this.retriever = retriever;
-        }
+        public Metadata( IPageDataContextRetriever pageContextRetriever )
+            => this.pageContextRetriever = pageContextRetriever;
 
-        public IViewComponentResult Invoke( )
+        public async Task<IViewComponentResult> InvokeAsync( )
         {
-            if( !retriever.TryRetrieve( out IPageDataContext<TreeNode> context ) )
-            {
-                return Content( string.Empty );
-            }
+            var meta = pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context )
+                ? context.Metadata
+                : null;
 
-            var viewModel = mapper.Map<MetadataComponentViewModel>( context );
-            return View( viewModel );
+            return View( meta );
         }
 
     }

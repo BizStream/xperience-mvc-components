@@ -1,8 +1,8 @@
-@model MetadataComponentViewModel
+@model IPageMetadata
 
-@if( !string.IsNullOrWhiteSpace( Model?.Author ) )
+@if( Model == null )
 {
-    <meta name="author" content="@Model.Author" />
+	return;
 }
 
 @if( !string.IsNullOrWhiteSpace( Model?.Title ) )
@@ -15,7 +15,7 @@
     <meta name="description" content="@Model.Description" />
 }
 
-@if( Model?.Keywords?.Any() == true )
+@if( !string.IsNullOrWhiteSpace( Model?.Keywords ) )
 {
-    <meta name="keywords" content="@string.Join( ',', Model.Keywords )" />
+    <meta name="keywords" content="@Model.Keywords" />
 }
