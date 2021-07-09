@@ -42,8 +42,9 @@ steps:
           | Where-Object { $_.FullName -match '(.*\\test\\.*\\*\.Tests\.csproj)$' }
           | ForEach-Object { $_.FullName.Substring( 0, $_.FullName.LastIndexOf( '\' ) ) }
           | ForEach-Object {
-              Set-Content -Path "${_}\appsettings.Test.json" -Value $content 
+              Set-Content -Path "${_}\appsettings.Development.json" -Value $content 
           }
+      pwsh: true
 
   - task: DotNetCoreCLI@2
     displayName: build projects
