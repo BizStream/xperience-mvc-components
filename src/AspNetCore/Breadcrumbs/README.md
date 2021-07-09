@@ -1,4 +1,4 @@
-# Xperience Breadcrumbs [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.breadcrumbs)
+# Xperience Breadcrumbs Component [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components.breadcrumbs)
 
 This package provides a Mvc `ViewComponent` implementation, and accompanying services, that allow breadcrumbs to be rendered based on [Content Tree Routing](https://docs.xperience.io/developing-websites/implementing-routing/content-tree-based-routing).
 

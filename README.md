@@ -2,6 +2,8 @@
 
 A collection of ASP.NET Core Mvc ViewComponents that integrate with Xperience CMS.
 
-|                                                                 |                                                                                                                                                                                                 |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs` | [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.breadcrumbs) |
+|                                                                 |                                                                                                                                                                                                            |
+| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `BizStream.Kentico.Xperience.AspNetCore.Components`             | [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components)                         |
+|                                                                 |                                                                                                                                                                                                            |
+| `BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs` | [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components.breadcrumbs) |
