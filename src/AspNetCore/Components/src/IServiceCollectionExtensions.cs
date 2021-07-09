@@ -1,5 +1,6 @@
 ﻿using System;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs;
+using BizStream.Kentico.Xperience.AspNetCore.Components.Metadata;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BizStream.Kentico.Xperience.AspNetCore.Components
