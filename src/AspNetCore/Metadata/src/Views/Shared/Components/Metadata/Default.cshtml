@@ -1,0 +1,21 @@
+@model IPageMetadata
+
+@if( Model == null )
+{
+	return;
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Title ) )
+{
+    <meta name="title" content="@Model.Title" />
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Description ) )
+{
+    <meta name="description" content="@Model.Description" />
+}
+
+@if( !string.IsNullOrWhiteSpace( Model?.Keywords ) )
+{
+    <meta name="keywords" content="@Model.Keywords" />
+}

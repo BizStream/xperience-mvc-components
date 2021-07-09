@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BizStream.Kentico.Xperience
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests", "src\AspNetCore\Breadcrumbs\test\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.csproj", "{F9099859-C4CC-4132-9D75-8CA5EF90A946}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{8821BCC6-A922-457E-A899-1A00281D7017}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bizstream.Kentico.Xperience.AspNetCore.Components.Metadata", "src\AspNetCore\Metadata\src\Bizstream.Kentico.Xperience.AspNetCore.Components.Metadata.csproj", "{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.Tests", "src\AspNetCore\Metadata\test\BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.Tests.csproj", "{2B1A1731-5642-495F-B345-969E624BB5A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +73,30 @@ Global
 		{F9099859-C4CC-4132-9D75-8CA5EF90A946}.Release|x64.Build.0 = Release|Any CPU
 		{F9099859-C4CC-4132-9D75-8CA5EF90A946}.Release|x86.ActiveCfg = Release|Any CPU
 		{F9099859-C4CC-4132-9D75-8CA5EF90A946}.Release|x86.Build.0 = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|x64.Build.0 = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Debug|x86.Build.0 = Debug|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|x64.ActiveCfg = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|x64.Build.0 = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|x86.ActiveCfg = Release|Any CPU
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8}.Release|x86.Build.0 = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|x64.Build.0 = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Debug|x86.Build.0 = Debug|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|x64.ActiveCfg = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|x64.Build.0 = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|x86.ActiveCfg = Release|Any CPU
+		{2B1A1731-5642-495F-B345-969E624BB5A8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +108,9 @@ Global
 		{F174EB98-310F-4A98-A40F-B9B8160D2E0F} = {F5D21AE1-F108-407D-B662-5592E0000333}
 		{E55EE5D8-2B8D-48E3-A2E4-6015038C3154} = {F174EB98-310F-4A98-A40F-B9B8160D2E0F}
 		{F9099859-C4CC-4132-9D75-8CA5EF90A946} = {F174EB98-310F-4A98-A40F-B9B8160D2E0F}
+		{8821BCC6-A922-457E-A899-1A00281D7017} = {F5D21AE1-F108-407D-B662-5592E0000333}
+		{99CC38ED-63BF-476A-99C3-F6D1CD8334C8} = {8821BCC6-A922-457E-A899-1A00281D7017}
+		{2B1A1731-5642-495F-B345-969E624BB5A8} = {8821BCC6-A922-457E-A899-1A00281D7017}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4B472B06-F657-470A-9883-5FFEDC07BB7A}
