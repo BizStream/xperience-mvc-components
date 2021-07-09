@@ -40,9 +40,10 @@ steps:
         $content = '{{ "CMSTestLicenseKey": "{0}" }}' -f $licenseKey
         Get-ChildItem -Recurse
           | Where-Object { $_.FullName -match '(.*\\test\\.*\\*\.Tests\.csproj)$' }
-          | ForEach-Object { $_.FullName }
-          | ForEach-Object { $_.Substring( 0, $_.LastIndexOf( '\' ) ) }
-          | ForEachObject { Set-Content -Path "${$_}\appsettings.Development.json" -Value $content }
+          | ForEach-Object { $_.FullName.Substring( 0, $_.FullName.LastIndexOf( '\' ) ) }
+          | ForEach-Object {
+              Set-Content -Path "${_}\appsettings.Test.json" -Value $content 
+          }
 
   - task: DotNetCoreCLI@2
     displayName: build projects
