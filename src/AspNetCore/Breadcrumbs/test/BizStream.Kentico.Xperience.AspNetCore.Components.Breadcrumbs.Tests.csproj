@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <IsTestProject>true</IsTestProject>
+        <!-- <TargetFrameworks>netcoreapp3.1</TargetFrameworks> -->
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="CMS.AssemblyDiscoverable" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AngleSharp" Version="0.16.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="CMSSiteUtils\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+</Project>
