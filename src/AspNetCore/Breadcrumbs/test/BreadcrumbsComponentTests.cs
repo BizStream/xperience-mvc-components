@@ -13,7 +13,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
 {
 
     [TestFixture( Category = "IsolatedMvc" )]
-    [TestOf( typeof( Breadcrumbs ) )]
+    [TestOf( typeof( XperienceBreadcrumbs ) )]
     public class BreadcrumbsComponentTests : BreadcrumbsTests<BreadcrumbsComponentTests.Startup>
     {
         public class Startup : XperienceTestStartup

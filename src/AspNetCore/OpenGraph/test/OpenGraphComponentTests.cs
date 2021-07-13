@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 {
 
     [TestFixture( Category = "IsolatedMvc" )]
-    [TestOf( typeof( OpenGraph ) )]
+    [TestOf( typeof( XperienceOpenGraph ) )]
     public class OpenGraphComponentTests : OpenGraphTests<OpenGraphComponentTests.Startup>
     {
         public class Startup : XperienceTestStartup

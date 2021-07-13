@@ -10,7 +10,7 @@
         <ol>
             @foreach( var breadcrumb in Model )
             {
-                @await Html.PartialAsync( "Components/Breadcrumbs/_BreadcrumbItem", breadcrumb )
+                @await Html.PartialAsync( $"Components/{nameof( XperienceBreadcrumbs )}/_BreadcrumbItem", breadcrumb )
             }
         </ol>
     </nav>

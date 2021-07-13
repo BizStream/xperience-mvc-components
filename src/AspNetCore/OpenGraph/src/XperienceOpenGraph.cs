@@ -8,14 +8,14 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph
 {
 
     /// <summary> A <see cref="ViewComponent"/> that renders meta-tags based on the current Xperience Page.  </summary>
-    public class OpenGraph : ViewComponent
+    public class XperienceOpenGraph : ViewComponent
     {
         #region Fields
         private readonly IOpenGraphDataRetriever openGraphRetriever;
         private readonly IPageDataContextRetriever pageContextRetriever;
         #endregion
 
-        public OpenGraph(
+        public XperienceOpenGraph(
             IOpenGraphDataRetriever openGraphRetriever,
             IPageDataContextRetriever pageContextRetriever
         )

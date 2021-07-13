@@ -42,7 +42,11 @@ public void ConfigureServices( IServiceCollection services )
 <head>
     @* ... *@
 
-    @await Component.InvokeAsync( nameof( OpenGraph ) )
+    @await Component.InvokeAsync( nameof( XperienceOpenGraph ) )
+
+    @* OR *@
+
+    @( await Component.InvokeAsync<XperienceOpenGraph>( )
 
     @* ... *@
 </head>

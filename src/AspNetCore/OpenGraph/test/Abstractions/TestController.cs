@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests.Abst
             => Content( "Hello, World!" );
 
         public IActionResult Test( )
-            => ViewComponent( nameof( OpenGraph ) );
+            => ViewComponent( typeof( XperienceOpenGraph ) );
 
     }
 

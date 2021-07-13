@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.Tests
 {
 
     [TestFixture( Category = "IsolatedMvc" )]
-    [TestOf( typeof( Metadata ) )]
+    [TestOf( typeof( XperienceMetadata ) )]
     public class MetadataComponentTests : MetadataTests<MetadataComponentTests.Startup>
     {
         public class Startup : XperienceTestStartup

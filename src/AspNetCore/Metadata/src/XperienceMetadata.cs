@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using CMS.DocumentEngine;
 using Kentico.Content.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
@@ -7,16 +6,16 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Metadata
 {
 
     /// <summary> A <see cref="ViewComponent"/> that renders meta-tags based on the current Xperience Page.  </summary>
-    public class Metadata : ViewComponent
+    public class XperienceMetadata : ViewComponent
     {
         #region Fields
         private readonly IPageDataContextRetriever pageContextRetriever;
         #endregion
 
-        public Metadata( IPageDataContextRetriever pageContextRetriever )
+        public XperienceMetadata( IPageDataContextRetriever pageContextRetriever )
             => this.pageContextRetriever = pageContextRetriever;
 
-        public async Task<IViewComponentResult> InvokeAsync( )
+        public IViewComponentResult Invoke( )
         {
             var meta = pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context )
                 ? context.Metadata

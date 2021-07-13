@@ -9,14 +9,14 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
 {
 
     /// <summary> A <see cref="ViewComponent"/> that renders breadcrumbs based on Xperience Content Tree Routing.  </summary>
-    public class Breadcrumbs : ViewComponent
+    public class XperienceBreadcrumbs : ViewComponent
     {
         #region Fields
         private readonly IBreadcrumbsRetriever breadcrumbsRetriever;
         private readonly IPageDataContextRetriever pageContextRetriever;
         #endregion
 
-        public Breadcrumbs(
+        public XperienceBreadcrumbs(
             IBreadcrumbsRetriever breadcrumbsRetriever,
             IPageDataContextRetriever pageContextRetriever
         )

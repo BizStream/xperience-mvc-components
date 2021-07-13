@@ -42,7 +42,11 @@ public void ConfigureServices( IServiceCollection services )
 <head>
     @* ... *@
 
-    @await Component.InvokeAsync( nameof( Metadata ) )
+    @await Component.InvokeAsync( nameof( XperienceMetadata ) )
+
+    @* OR *@
+
+    @( await Component.InvokeAsync<XperienceMetadata>( ) )
 
     @* ... *@
 </head>

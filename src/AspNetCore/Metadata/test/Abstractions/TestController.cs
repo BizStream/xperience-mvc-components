@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.Tests.Abstr
             => Content( "Hello, World!" );
 
         public IActionResult Test( )
-            => ViewComponent( nameof( Metadata ) );
+            => ViewComponent( typeof( XperienceMetadata ) );
 
     }
 

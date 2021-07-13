@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Ab
             => Content( "Hello, World!" );
 
         public IActionResult Test( )
-            => ViewComponent( nameof( Breadcrumbs ) );
+            => ViewComponent( typeof( XperienceBreadcrumbs ) );
 
     }
 
