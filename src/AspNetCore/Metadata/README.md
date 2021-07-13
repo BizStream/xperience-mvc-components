@@ -1,6 +1,6 @@
 # Xperience Metadata Component [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Metadata)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components.Metadata)
 
-This package provides a Mvc `ViewComponent` implementation that allow common `meta` fields to be rendered from content within Xperience.
+This package provides a Mvc `ViewComponent` implementation for rendering common `meta` elements from content within Xperience.
 
 ## Usage
 

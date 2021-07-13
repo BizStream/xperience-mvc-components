@@ -1,6 +1,7 @@
 ﻿using System;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Metadata;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BizStream.Kentico.Xperience.AspNetCore.Components
@@ -20,6 +21,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components
 
             services.AddXperienceBreadcrumbsComponent();
             services.AddXperienceMetadataComponent();
+            services.AddXperienceOpenGraphComponent();
 
             return services;
         }

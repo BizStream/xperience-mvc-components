@@ -1,6 +1,6 @@
 # Xperience Breadcrumbs Component [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components.breadcrumbs)
 
-This package provides a Mvc `ViewComponent` implementation, and accompanying services, that allow breadcrumbs to be rendered based on [Content Tree Routing](https://docs.xperience.io/developing-websites/implementing-routing/content-tree-based-routing).
+This package provides a Mvc `ViewComponent` implementation, and accompanying services, for rendering Breadcrumbs based on [Content Tree Routing](https://docs.xperience.io/developing-websites/implementing-routing/content-tree-based-routing).
 
 ## Usage
 
@@ -97,9 +97,9 @@ public class CustomBreadcrumbsRetriever : BreadcrumbsRetriever
     {
     }
 
-    protected override BreadcrumbItem CreateBreadcrumbItem( TreeNode node )
+    protected override BreadcrumbItem CreateBreadcrumbItem( TreeNode page )
     {
-        var breadcrumb = base.CreateBreadcrumbItem( node );
+        var breadcrumb = base.CreateBreadcrumbItem( page );
 
         // Use a custom field for breadcrumb label
         breadcrumb.Label = node.GetStringValue(

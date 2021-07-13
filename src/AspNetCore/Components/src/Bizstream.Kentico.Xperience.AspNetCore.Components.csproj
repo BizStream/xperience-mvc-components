@@ -18,6 +18,7 @@
     <ItemGroup>
         <ProjectReference Include="$(SourceDirectory)\AspNetCore\Breadcrumbs\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
         <ProjectReference Include="$(SourceDirectory)\AspNetCore\Metadata\src\BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.csproj" />
+        <ProjectReference Include="$(SourceDirectory)\AspNetCore\OpenGraph\src\BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.csproj" />
     </ItemGroup>
 
     <ItemGroup>
