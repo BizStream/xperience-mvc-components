@@ -2,9 +2,9 @@
 
     <PropertyGroup>
         <AutoIncludeReadMe>false</AutoIncludeReadMe>
-        <Description>Meta package of all BizStream Xperience Components.</Description>
+        <Description>A collection of ASP.NET Core Mvc ViewComponents that integrate with Xperience CMS.</Description>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <VersionPrefix>1.0.1</VersionPrefix>
+        <VersionPrefix>2.0.0</VersionPrefix>
     </PropertyGroup>
 
     <ItemGroup>
