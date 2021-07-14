@@ -1,17 +1,21 @@
+@using System.Collections.Generic
+@using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
+@using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions
+
 @model IEnumerable<BreadcrumbItem>
 
-@if( !Model.Any() )
+@if (!Model.Any())
 {
 	return;
 }
 
 <div class="breadcrumbs-container">
-    <nav class="breadcrumbs">
-        <ol>
-            @foreach( var breadcrumb in Model )
-            {
-                @await Html.PartialAsync( $"Components/{nameof( XperienceBreadcrumbs )}/_BreadcrumbItem", breadcrumb )
-            }
-        </ol>
-    </nav>
+	<nav class="breadcrumbs">
+		<ol>
+			@foreach (var breadcrumb in Model)
+			{
+				@await Html.PartialAsync( $"Components/{nameof( XperienceBreadcrumbs )}/_BreadcrumbItem", breadcrumb )
+			}
+		</ol>
+	</nav>
 </div>

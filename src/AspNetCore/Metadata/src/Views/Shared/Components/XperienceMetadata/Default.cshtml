@@ -1,23 +1,27 @@
+@using BizStream.Kentico.Xperience.AspNetCore.Components.Metadata
+@using Kentico.Content.Web.Mvc
+@using Kentico.Web.Mvc
+
 @model IPageMetadata
 
-@if( Model == null )
+@if (Model == null)
 {
 	return;
 }
 
-@if( !string.IsNullOrWhiteSpace( Model?.Title ) )
+@if (!string.IsNullOrWhiteSpace(Model?.Title))
 {
-    <meta name="title" content="@Model.Title" />
+	<meta name="title" content="@Model.Title" />
 }
 
-@if( !string.IsNullOrWhiteSpace( Model?.Description ) )
+@if (!string.IsNullOrWhiteSpace(Model?.Description))
 {
-    <meta name="description" content="@Model.Description" />
+	<meta name="description" content="@Model.Description" />
 }
 
-@if( !string.IsNullOrWhiteSpace( Model?.Keywords ) )
+@if (!string.IsNullOrWhiteSpace(Model?.Keywords))
 {
-    <meta name="keywords" content="@Model.Keywords" />
+	<meta name="keywords" content="@Model.Keywords" />
 }
 
 <link rel="canonical" href="@Url.Kentico().PageCanonicalUrl()" />
