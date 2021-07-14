@@ -7,7 +7,7 @@ using CMS.DocumentEngine;
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions
 {
 
-    /// <summary> Describes a service that can retrieve breadcrumbs. </summary>
+    /// <summary> Describes a service that can retrieve a page's <see cref="BreadcrumbItem"/>s. </summary>
     public interface IBreadcrumbsRetriever
     {
 

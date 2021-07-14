@@ -14,11 +14,11 @@
     </ItemGroup>
     
     <ItemGroup>
-        <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
+        <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Content Include="CMSSiteUtils\**\*">
+        <Content Include="CMSSiteUtils\**\*.zip">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </Content>
     </ItemGroup>

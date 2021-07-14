@@ -14,7 +14,7 @@
     </ItemGroup>
     
     <ItemGroup>
-        <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.csproj" />
+        <ProjectReference Include="..\src\BizStream.Kentico.Xperience.AspNetCore.Components.Metadata.csproj" />
     </ItemGroup>
 
     <ItemGroup>

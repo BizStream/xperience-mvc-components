@@ -1,6 +1,6 @@
 # Xperience Breadcrumbs Component [![NuGet Version](https://img.shields.io/nuget/v/BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs)](https://nuget.org/packages/bizstream.kentico.xperience.aspnetcore.components.breadcrumbs)
 
-This package provides a Mvc `ViewComponent` implementation, and accompanying services, that allow breadcrumbs to be rendered based on [Content Tree Routing](https://docs.xperience.io/developing-websites/implementing-routing/content-tree-based-routing).
+This package provides a Mvc `ViewComponent` implementation, and accompanying services, for rendering Breadcrumbs based on [Content Tree Routing](https://docs.xperience.io/developing-websites/implementing-routing/content-tree-based-routing).
 
 ## Usage
 
@@ -39,9 +39,15 @@ public void ConfigureServices( IServiceCollection services )
 - Invoke the component within a Razor View:
 
 ```razor
+@using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
+
 @* ... *@
 
-@await Component.InvokeAsync( nameof( Breadcrumbs ) )
+@await Component.InvokeAsync( nameof( XperienceBreadcrumbs ) )
+
+@* OR *@
+
+@( await Component.InvokeAsync<XperienceBreadcrumbs>( ) )
 
 @* ... *@
 ```
@@ -64,11 +70,11 @@ div.breadcrumbs-container
 
 As described in the _Razor Class Library_ [documentation](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class#override-views-partial-views-and-pages-2), Views created in the host Web Project take precedence over that of Views referenced in a Razor Class Library. This package provides the following Views that can be overridden to customize the rendering of breadcrumbs:
 
-- `Views\Shared\Components\Breadcrumbs\_BreadcrumbItem.cshtml`
+- `Views\Shared\Components\XperienceBreadcrumbs\_BreadcrumbItem.cshtml`
 
 Override this View to customize how individual `BreadcrumbItem`s are rendered within the `Default` view.
 
-- `Views\Shared\Components\Breadcrumbs\Default.cshtml`
+- `Views\Shared\Components\XperienceBreadcrumbs\Default.cshtml`
 
 Override this View to completely override/customize how breadcrumbs are rendered.
 
@@ -97,9 +103,9 @@ public class CustomBreadcrumbsRetriever : BreadcrumbsRetriever
     {
     }
 
-    protected override BreadcrumbItem CreateBreadcrumbItem( TreeNode node )
+    protected override BreadcrumbItem CreateBreadcrumbItem( TreeNode page )
     {
-        var breadcrumb = base.CreateBreadcrumbItem( node );
+        var breadcrumb = base.CreateBreadcrumbItem( page );
 
         // Use a custom field for breadcrumb label
         breadcrumb.Label = node.GetStringValue(

@@ -38,7 +38,13 @@ steps:
         }
 
         $content = '{{ "CMSTestLicenseKey": "{0}" }}' -f $licenseKey
-        Set-Content -Path src/AspNetCore/Breadcrumbs/test/appsettings.Development.json -Value $content
+        Get-ChildItem -Recurse
+          | Where-Object { $_.FullName -match '(.*\\test\\.*\\*\.Tests\.csproj)$' }
+          | ForEach-Object { $_.FullName.Substring( 0, $_.FullName.LastIndexOf( '\' ) ) }
+          | ForEach-Object {
+              Set-Content -Path "${_}\appsettings.Development.json" -Value $content 
+          }
+      pwsh: true
 
   - task: DotNetCoreCLI@2
     displayName: build projects

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Abstractions
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests.Abstractions
 {
 
     public class TestController : Controller
@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests.Ab
             => Content( "Hello, World!" );
 
         public IActionResult Test( )
-            => ViewComponent( typeof( XperienceBreadcrumbs ) );
+            => ViewComponent( typeof( XperienceOpenGraph ) );
 
     }
 

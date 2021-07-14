@@ -17,6 +17,7 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <RepositoryUrl>https://github.com/BizStream/xperience-mvc-components.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
+        <PackageTags>xperience;asp.net-core;viewcomponent</PackageTags>
     </PropertyGroup>
 
 </Project>

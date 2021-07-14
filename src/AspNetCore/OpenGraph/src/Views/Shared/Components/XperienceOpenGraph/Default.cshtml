@@ -1,0 +1,33 @@
+@using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
+@using Kentico.Content.Web.Mvc
+@using Kentico.Web.Mvc
+
+@model OpenGraphData
+
+@if (Model == null)
+{
+	return;
+}
+
+<link rel="og:url" href="@Url.Kentico().PageCanonicalUrl()" />
+<meta name="og:type" content="website" />
+
+@if (!string.IsNullOrWhiteSpace(Model?.Title))
+{
+	<meta name="og:title" content="@Model.Title" />
+}
+
+@if (!string.IsNullOrWhiteSpace(Model?.Description))
+{
+	<meta name="og:description" content="@Model.Description" />
+}
+
+@if (Model?.ImageUrl != null)
+{
+	<meta name="og:image" content="@Model.ImageUrl" />
+}
+
+@if (Model?.VideoUrl != null)
+{
+	<meta name="og:video" content="@Model.VideoUrl" />
+}

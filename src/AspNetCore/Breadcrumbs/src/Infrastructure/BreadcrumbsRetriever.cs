@@ -105,7 +105,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Infrastr
             var options = builder.Build();
             var nodes = await pageRetriever.RetrieveAsync<TreeNode>(
                 query => ApplyBreadcrumbsParameters( query, page, options ),
-                cache => cache.Key( CacheKeys.Nodes( page, options ) )
+                cache => cache.Key( BreadcrumbCacheKeys.Nodes( page, options ) )
                     .Dependencies( ( _, __ ) => { } ),
                 cancellationToken: cancellation
             );
