@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions;
@@ -8,7 +9,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Filters
 {
 
     /// <summary> Ensures the last breadcrumb's <see cref="BreadcrumbItem.Path"/> is empty. </summary>
-    public class ExcludeLastBreadcrumbPathFilter : BreadcrumbsFilter
+    public class EmptyLastBreadcrumbPathFilter : BreadcrumbsFilter
     {
         #region Properties
 

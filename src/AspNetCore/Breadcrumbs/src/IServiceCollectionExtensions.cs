@@ -22,7 +22,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
             services.AddOptions<BreadcrumbRetrievalOptions>();
             services.AddTransient<IBreadcrumbsRetriever, BreadcrumbsRetriever>();
 
-            services.AddScoped<IBreadcrumbsFilter, ExcludeLastBreadcrumbPathFilter>();
+            services.AddScoped<IBreadcrumbsFilter, EmptyLastBreadcrumbPathFilter>();
 
             return services;
         }
