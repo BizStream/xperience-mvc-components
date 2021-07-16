@@ -11,7 +11,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstract
         public string Label { get; set; }
 
         /// <summary> The Url path of the page the item references. </summary>
-        public PathString Path { get; set; }
+        public PathString Path { get; set; } = PathString.Empty;
 
     }
 

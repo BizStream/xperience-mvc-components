@@ -29,12 +29,10 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
             this.pageContextRetriever = pageContextRetriever;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync( )
+        /// <summary> Execute <see cref="IBreadcrumbsFilter"/>s against the given <paramref name="breadcrumbs"/>. </summary>
+        /// <param name="breadcrumbs"> The breadcrumbs to filter. </param>
+        protected async Task<IEnumerable<BreadcrumbItem>> FilterBreadcrumbsAsync( IEnumerable<BreadcrumbItem> breadcrumbs )
         {
-            var breadcrumbs = pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context )
-                ? await breadcrumbsRetriever.RetrieveAsync( context.Page )
-                : null;
-
             breadcrumbs ??= Enumerable.Empty<BreadcrumbItem>();
             if( filters?.Any() == true )
             {
@@ -44,7 +42,21 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
                 }
             }
 
-            return View( breadcrumbs );
+            return breadcrumbs;
+        }
+
+        /// <summary> Get breadcrumbs for the current Xperience page. </summary>
+        protected async Task<IEnumerable<BreadcrumbItem>> GetPageBreadcrumbsAsync( )
+            => pageContextRetriever.TryRetrieve( out IPageDataContext<TreeNode> context )
+                ? await breadcrumbsRetriever.RetrieveAsync( context.Page )
+                : null;
+
+        public virtual async Task<IViewComponentResult> InvokeAsync( )
+        {
+            var breadcrumbs = await GetPageBreadcrumbsAsync();
+            return View(
+                await FilterBreadcrumbsAsync( breadcrumbs )
+            );
         }
 
     }
