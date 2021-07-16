@@ -15,7 +15,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstract
         #endregion
 
         /// <inheritdoc/>
-        public abstract Task<IEnumerable<BreadcrumbItem>> OnFilterBreadcrumbsAsync( HttpContext context, IEnumerable<BreadcrumbItem> breadcrumbs );
+        public abstract Task<IEnumerable<BreadcrumbItem>> OnFilterBreadcrumbsAsync( HttpContext httpContext, IEnumerable<BreadcrumbItem> breadcrumbs );
 
     }
 }

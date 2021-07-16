@@ -14,11 +14,11 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstract
         int Order { get; }
         #endregion
 
-        /// <summary> Filter the given <paramref name="breadcrumbs"/> for the given <paramref name="context"/>. </summary>
-        /// <param name="context"> The current <see cref="HttpContext"/>. </param>
+        /// <summary> Filter the given <paramref name="breadcrumbs"/> for the given <paramref name="httpContext"/>. </summary>
+        /// <param name="httpContext"> The current <see cref="HttpContext"/>. </param>
         /// <param name="breadcrumbs"> The <see cref="BreadcrumbItem"/>s to modify. </param>
         /// <returns> The modified <paramref name="breadcrumbs"/>. </returns>
-        Task<IEnumerable<BreadcrumbItem>> OnFilterBreadcrumbsAsync( HttpContext context, IEnumerable<BreadcrumbItem> breadcrumbs );
+        Task<IEnumerable<BreadcrumbItem>> OnFilterBreadcrumbsAsync( HttpContext httpContext, IEnumerable<BreadcrumbItem> breadcrumbs );
 
     }
 
