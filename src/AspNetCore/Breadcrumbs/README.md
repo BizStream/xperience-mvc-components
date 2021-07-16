@@ -143,6 +143,10 @@ public void ConfigureServices( IServiceCollection services )
 }
 ```
 
+#### Breadcrumbs Filters
+
+An `IBreadcrumbsFilter` contract and an `abstract` base class `BreadcrumbsFilter` are provided, which can be used to customize `BreadcrumbItem`s prior to the `XperienceBreadcrumbs` ViewComponent invoking it's View. See the [`ExcludeLastBreadcrumbPathFilter`](src/Filters/ExcludeLastBreadcrumbPathFilter.cs) for an example.
+
 ## FAQ
 
 - _Will this `ViewComponent` work if I'm not using Page Routing?_

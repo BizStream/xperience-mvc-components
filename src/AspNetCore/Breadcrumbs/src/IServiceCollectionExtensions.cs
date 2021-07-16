@@ -1,5 +1,6 @@
 using System;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions;
+using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Filters;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -20,6 +21,9 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
 
             services.AddOptions<BreadcrumbRetrievalOptions>();
             services.AddTransient<IBreadcrumbsRetriever, BreadcrumbsRetriever>();
+
+            services.AddScoped<IBreadcrumbsFilter, EmptyLastBreadcrumbPathFilter>();
+
             return services;
         }
 

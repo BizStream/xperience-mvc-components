@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions;
@@ -12,15 +13,18 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
     public class XperienceBreadcrumbs : ViewComponent
     {
         #region Fields
+        private readonly IEnumerable<IBreadcrumbsFilter> filters;
         private readonly IBreadcrumbsRetriever breadcrumbsRetriever;
         private readonly IPageDataContextRetriever pageContextRetriever;
         #endregion
 
         public XperienceBreadcrumbs(
+            IEnumerable<IBreadcrumbsFilter> filters,
             IBreadcrumbsRetriever breadcrumbsRetriever,
             IPageDataContextRetriever pageContextRetriever
         )
         {
+            this.filters = filters;
             this.breadcrumbsRetriever = breadcrumbsRetriever;
             this.pageContextRetriever = pageContextRetriever;
         }
@@ -31,7 +35,16 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs
                 ? await breadcrumbsRetriever.RetrieveAsync( context.Page )
                 : null;
 
-            return View( breadcrumbs ?? Enumerable.Empty<BreadcrumbItem>() );
+            breadcrumbs ??= Enumerable.Empty<BreadcrumbItem>();
+            if( filters?.Any() == true )
+            {
+                foreach( var filter in filters.OrderByDescending( filter => filter.Order ) )
+                {
+                    breadcrumbs = await filter.OnFilterBreadcrumbsAsync( HttpContext, breadcrumbs );
+                }
+            }
+
+            return View( breadcrumbs );
         }
 
     }
