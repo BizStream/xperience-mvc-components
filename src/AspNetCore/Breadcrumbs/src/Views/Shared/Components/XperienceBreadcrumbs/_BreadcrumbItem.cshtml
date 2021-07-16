@@ -4,12 +4,12 @@
 @model BreadcrumbItem
 
 <li class="breadcrumb-item">
-    @if ( Model.Path == null || Model.Path != PathString.Empty)
-    {
-        <a href="@Model.Path" title="@Model.Label">@Model.Label</a>
-    }
-    else
-    {
-        <span>@Model.Label</span>
-    }
+	@if( Model.Path == null || Model.Path == PathString.Empty )
+	{
+		<a href="@Model.Path" title="@Model.Label">@Model.Label</a>
+	}
+	else
+	{
+		<span>@Model.Label</span>
+	}
 </li>
