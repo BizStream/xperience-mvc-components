@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Filters
 {
 
-    /// <summary> A <see cref="BreadcrumbsFilter"/> that filters breadcrumbs for the given <typeparamref name="TController"/>. </summary>
+    /// <summary> An <see cref="IBreadcrumbsFilter"/> that filters breadcrumbs for <typeparamref name="TController"/> actions. </summary>
     /// <typeparam name="TController"> The type of controller to filter breadcrumbs for. </typeparam>
     public abstract class ControllerBreadcrumbsFilter<TController> : BreadcrumbsFilter
         where TController : ControllerBase
@@ -40,7 +40,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Filters
             return breadcrumbs;
         }
 
-        /// <summary> Filter the given <paramref name="breadcrumbs"/> for the given <paramref name="httpContext"/>. </summary>
+        /// <summary> Filter the given <paramref name="breadcrumbs"/> for the given <paramref name="httpContext"/> and <paramref name="actionContext"/>. </summary>
         /// <param name="httpContext"> The current <see cref="HttpContext"/>. </param>
         /// <param name="actionContext"> The current <see cref="ActionContext"/>. </param>
         /// <param name="breadcrumbs"> The <see cref="BreadcrumbItem"/>s to modify. </param>
