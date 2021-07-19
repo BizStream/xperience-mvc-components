@@ -1,7 +1,15 @@
 @using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions
+@using Microsoft.AspNetCore.Http
 
 @model BreadcrumbItem
 
 <li class="breadcrumb-item">
-	<a href="@Model.Path" title="@Model.Label">@Model.Label</a>
+	@if( Model.Path == null || Model.Path == PathString.Empty )
+	{
+		<a href="@Model.Path" title="@Model.Label">@Model.Label</a>
+	}
+	else
+	{
+		<span>@Model.Label</span>
+	}
 </li>

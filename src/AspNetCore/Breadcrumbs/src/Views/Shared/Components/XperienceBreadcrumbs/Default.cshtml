@@ -4,7 +4,7 @@
 
 @model IEnumerable<BreadcrumbItem>
 
-@if (!Model.Any())
+@if( !Model.Any() )
 {
 	return;
 }
@@ -12,7 +12,7 @@
 <div class="breadcrumbs-container">
 	<nav class="breadcrumbs">
 		<ol>
-			@foreach (var breadcrumb in Model)
+			@foreach( var breadcrumb in Model )
 			{
 				@await Html.PartialAsync( $"Components/{nameof( XperienceBreadcrumbs )}/_BreadcrumbItem", breadcrumb )
 			}
