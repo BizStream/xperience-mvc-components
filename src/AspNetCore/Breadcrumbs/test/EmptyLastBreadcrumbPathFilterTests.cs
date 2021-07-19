@@ -33,6 +33,8 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
         {
             var breadcrumbs = new List<BreadcrumbItem>
             {
+                new BreadcrumbItem { Label = "Test", Path = "/test" },
+                new BreadcrumbItem { Label = "Test", Path = "/test" },
                 new BreadcrumbItem { Label = "Test", Path = "/test" }
             };
 
@@ -40,7 +42,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Tests
             var crumbs = ( await filter.OnFilterBreadcrumbsAsync( new DefaultHttpContext(), breadcrumbs ) )
                 .ToList();
 
-            Assert.AreEqual( PathString.Empty, crumbs[ ^1 ].Path );
+            Assert.AreEqual( PathString.Empty, crumbs.Last().Path );
         }
 
     }
