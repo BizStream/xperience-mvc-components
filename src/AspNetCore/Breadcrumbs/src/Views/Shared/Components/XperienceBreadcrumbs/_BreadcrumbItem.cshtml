@@ -6,10 +6,10 @@
 <li class="breadcrumb-item">
 	@if( Model.Path == null || Model.Path == PathString.Empty )
 	{
-		<a href="@Model.Path" title="@Model.Label">@Model.Label</a>
+		<span>@Model.Label</span>
 	}
 	else
 	{
-		<span>@Model.Label</span>
+		<a href="@Model.Path" title="@Model.Label">@Model.Label</a>
 	}
 </li>
