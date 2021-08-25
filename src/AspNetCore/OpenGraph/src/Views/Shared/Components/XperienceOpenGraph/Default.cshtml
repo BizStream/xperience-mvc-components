@@ -9,8 +9,8 @@
 	return;
 }
 
-<link rel="og:url" href="@Url.Kentico().PageCanonicalUrl()" />
-<meta name="og:type" content="website" />
+<meta property="og:url" href="@Url.Kentico().PageCanonicalUrl()" />
+<meta property="og:type" content="website" />
 
 @if (!string.IsNullOrWhiteSpace(Model?.Title))
 {
