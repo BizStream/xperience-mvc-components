@@ -9,25 +9,25 @@
 	return;
 }
 
-<link rel="og:url" href="@Url.Kentico().PageCanonicalUrl()" />
-<meta name="og:type" content="website" />
+<meta property="og:url" content="@Url.Kentico().PageCanonicalUrl()" />
+<meta property="og:type" content="website" />
 
 @if (!string.IsNullOrWhiteSpace(Model?.Title))
 {
-	<meta name="og:title" content="@Model.Title" />
+	<meta property="og:title" content="@Model.Title" />
 }
 
 @if (!string.IsNullOrWhiteSpace(Model?.Description))
 {
-	<meta name="og:description" content="@Model.Description" />
+	<meta property="og:description" content="@Model.Description" />
 }
 
 @if (Model?.ImageUrl != null)
 {
-	<meta name="og:image" content="@Model.ImageUrl" />
+	<meta property="og:image" content="@Model.ImageUrl" />
 }
 
 @if (Model?.VideoUrl != null)
 {
-	<meta name="og:video" content="@Model.VideoUrl" />
+	<meta property="og:video" content="@Model.VideoUrl" />
 }
