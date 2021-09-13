@@ -50,7 +50,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var description = document.Head.QuerySelector( "meta[name='og:description']" );
+            var description = document.Head.QuerySelector( "meta[property='og:description']" );
             Assert.IsNull( description );
         }
 
@@ -62,7 +62,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var description = document.Head.QuerySelector( "meta[name='og:description']" );
+            var description = document.Head.QuerySelector( "meta[property='og:description']" );
             Assert.IsNotNull( description );
             Assert.AreEqual( "Test Description", description.GetAttribute( "content" ) );
         }
@@ -75,7 +75,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var title = document.Head.QuerySelector( "meta[name='og:title']" );
+            var title = document.Head.QuerySelector( "meta[property='og:title']" );
             Assert.IsNull( title );
         }
 
@@ -87,7 +87,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var title = document.Head.QuerySelector( "meta[name='og:title']" );
+            var title = document.Head.QuerySelector( "meta[property='og:title']" );
             Assert.IsNotNull( title );
             Assert.AreEqual( $"{nameof( TestNode )} With Complete OpenGraph Data", title.GetAttribute( "content" ) );
         }
@@ -100,7 +100,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var image = document.Head.QuerySelector( "meta[name='og:image']" );
+            var image = document.Head.QuerySelector( "meta[property='og:image']" );
             Assert.IsNull( image );
         }
 
@@ -112,9 +112,9 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var image = document.Head.QuerySelector( "meta[name='og:image']" );
+            var image = document.Head.QuerySelector( "meta[property='og:image']" );
             Assert.IsNotNull( image );
-            Assert.AreEqual("http://localhost/getmedia/00000000-0000-0000-0000-000000000000/image.png?&ext=.png", image.GetAttribute( "content" ) );
+            Assert.AreEqual( "http://localhost/getmedia/00000000-0000-0000-0000-000000000000/image.png?&ext=.png", image.GetAttribute( "content" ) );
         }
 
         [Test]
@@ -125,7 +125,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var image = document.Head.QuerySelector( "meta[name='og:video']" );
+            var image = document.Head.QuerySelector( "meta[property='og:video']" );
             Assert.IsNull( image );
         }
 
@@ -137,7 +137,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests
 
             var document = await HtmlHelpers.GetDocumentAsync( response );
 
-            var image = document.Head.QuerySelector( "meta[name='og:video']" );
+            var image = document.Head.QuerySelector( "meta[property='og:video']" );
             Assert.IsNotNull( image );
             Assert.AreEqual( "http://localhost/getmedia/00000000-0000-0000-0000-000000000000/video.mp4?&ext=.mp4", image.GetAttribute( "content" ) );
         }
