@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using CMS.DocumentEngine;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
 {
 
     /// <summary> Describes a service that can retrieve a page's <see cref="OpenGraphData"/>. </summary>

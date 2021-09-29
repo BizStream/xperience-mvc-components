@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
 using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Tests.Abstractions;
 using BizStream.Kentico.Xperience.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.Builder;

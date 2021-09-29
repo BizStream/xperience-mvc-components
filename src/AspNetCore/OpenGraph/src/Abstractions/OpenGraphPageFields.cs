@@ -1,7 +1,7 @@
-﻿using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
+﻿using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
 using CMS.DocumentEngine;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
 {
 
     /// <summary> Represents source field names to be used when mapping a <see cref="TreeNode"/> to a <see cref="OpenGraphData"/>. </summary>

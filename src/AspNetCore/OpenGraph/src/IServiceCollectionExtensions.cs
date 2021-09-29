@@ -1,6 +1,6 @@
 using System;
-using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
-using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph

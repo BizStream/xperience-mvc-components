@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Abstractions;
@@ -13,7 +12,7 @@ namespace BizStream.Kentico.Xperience.AspNetCore.Components.Breadcrumbs.Filters
     public class RootBreadcrumbsFilter : IRootBreadcrumbsFilter
     {
         #region Properties
-        public int Order => throw new NotImplementedException();
+        public int Order => 0;
         #endregion
 
         /// <inheritdoc/>

@@ -1,7 +1,7 @@
-﻿using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
+﻿using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
 using CMS.DocumentEngine;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
 {
 
     /// <summary> Represents options used when retrieving <see cref="OpenGraphData"/> for a page. </summary>

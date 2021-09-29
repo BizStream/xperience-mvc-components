@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
 using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure;
 using CMS.Base;
 using CMS.DocumentEngine;
 using CMS.SiteProvider;
 using Microsoft.Extensions.Options;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure
 {
 
     /// <summary> The default implementation of a service that can retrieve a page's OpenGraph data. </summary>
