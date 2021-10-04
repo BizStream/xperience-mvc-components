@@ -1,9 +1,9 @@
 ﻿using System;
-using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
+using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
 using CMS.DocumentEngine;
 using Kentico.Content.Web.Mvc;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure
 {
 
     /// <summary> Extensions to <see cref="OpenGraphDataRetrievalOptions"/>s for fluent configuration. </summary>

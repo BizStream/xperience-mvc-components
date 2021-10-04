@@ -1,4 +1,4 @@
-﻿using Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
+﻿using BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions;
 
 namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Infrastructure
 {

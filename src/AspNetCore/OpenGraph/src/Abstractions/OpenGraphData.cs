@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Bizstream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
+namespace BizStream.Kentico.Xperience.AspNetCore.Components.OpenGraph.Abstractions
 {
 
     /// <summary> Represents a page's OpenGraph data. </summary>
